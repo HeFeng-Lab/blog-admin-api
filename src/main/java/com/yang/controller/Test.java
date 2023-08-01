@@ -1,8 +1,8 @@
 package com.yang.controller;
 
-
 import com.yang.common.R;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 @Slf4j
 public class Test {
-
-  @GetMapping("")
+  @GetMapping()
   public R<String> Test() {
-    return R.error("Hello World!");
+    return R.success("Hello World!");
   }
 }
